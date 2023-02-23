@@ -1,16 +1,19 @@
-
-
-const {knex} = require('./db');
+const { knex } = require('./db');
 
 module.exports = {
     create,
-    getAll
+    getAll,
+    getproducts
 }
 
-async function getAll(){
+async function getAll() {
     return knex.select().from('Products');
 }
 
-async function create(data){
-    return knex('Products').insert(data); 
+async function create(data) {
+    return knex('Products').insert(data);
+}
+
+async function getproducts() {
+    return knex.select().from('products');
 }

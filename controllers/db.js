@@ -2,7 +2,6 @@ const CONFIG = require('../config.json');
 const Knex = require('knex');
 
 
-
 module.exports = {
     knex: Knex({
         client: 'mssql',
@@ -12,7 +11,7 @@ module.exports = {
             password: CONFIG.DB_PASS,
             database: CONFIG.DATABASE,
             options: {
-                port: CONFIG.DB_PORT || 1433
+                port: CONFIG.DB_PORT || 1433,
             }
         }
     })

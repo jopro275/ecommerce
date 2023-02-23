@@ -3,7 +3,8 @@ const {knex} = require('./db');
 
 module.exports = {
     createCategory,
-    getAll
+    getAll,
+    getcategory
 }
 
 async function getAll(){
@@ -12,4 +13,8 @@ async function getAll(){
 
 async function createCategory(category){
     return knex('Categories').insert(category); 
+}
+
+async function getcategory(){
+  return knex.select().from('Categories');
 }

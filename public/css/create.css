@@ -1,0 +1,35 @@
+h1{
+	text-align: center;
+}
+.grid{
+	display: grid;
+	place-items: center;
+}
+
+form{
+	border: solid;
+	padding: 30px;
+	border-radius: 20px;
+	text-align: center;
+}
+
+form > div{
+	padding: 20px;
+}
+
+input,
+select,
+textarea{
+	padding: 10px;
+	border-radius: 20px;
+}
+
+button {
+	background: #007bff;
+	padding: 10px 20px;
+	margin-top: 10px;
+	color: white;
+	text-decoration: none;
+	border-radius: 100vw ;
+	border: none;
+}

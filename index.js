@@ -4,10 +4,12 @@ const CONFIG = require('./config.json');
 const CategoriesRouter = require('./routes/categories');
 const ProductsRouter = require('./routes/products');
 
+app.use(express.static(__dirname + '/public') )
+
 app.set('view engine', 'ejs');
 
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
 
 app.use('/categories', CategoriesRouter);
 app.use('/products', ProductsRouter);

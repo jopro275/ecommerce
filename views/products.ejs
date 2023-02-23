@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="/css/view.css">
+</head>
+
+<body>
+	<div class="grid">
+		<table class="table">
+			<thead>
+				<th>Name</th>
+				<th>Price</th>
+				<th>Description</th>
+				<th>Image</th>
+				<th>CategoryId</th>
+			</thead>
+			<tbody>
+				<%for(let i=0; i < productsObj.length; i++){%>
+					<tr>
+						<td>
+							<%=productsObj[i].ProductName%>
+						</td>
+						<td>$<%=productsObj[i].Price%>
+						</td>
+						<td>
+							<%=productsObj[i].Description%>
+						</td>
+						<td><img style="width: 100px; height: 100px;" src="../assets/<%=productsObj[i].Image%>"
+								alt=""></img></td>
+						<td>
+							<%=productsObj[i].CategoryId%>
+						</td>
+					</tr>
+					<%}%>
+			</tbody>
+		</table>
+		<a class="button" href="/products/create">Create Product</a>
+	</div>
+</body>
+
+</html>
